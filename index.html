@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array in JS (Task2)</title>
+</head>
+<body>
+    <script>
+        //تعريف المصفوفة واضافة محتوى لها 
+        let numbers = [10, 20, 30, 40, 50];
+
+        // اضافة عنصر جديد الى المصفوفة عن طريق push
+        numbers.push(12);
+        console.log(numbers);
+
+        //اوالة اخر عنصر في المصفوفة عن طريق pop
+        numbers.pop();
+        console.log(numbers);
+
+        // انشاء loop لمررو على كل عنصر في المصفوفة عن طريق forEach وطباعته في console
+        numbers.forEach((number =>{
+            console.log(number);
+        }));
+
+        // انشاء مصفوفة بناء على شرط وبالاعتماد على مصفوفة سابقة وطباعتها في console
+        let valuesWithinCondition = numbers.filter(number => number >= 40);
+        console.log(valuesWithinCondition);
+
+        // انشاء متغير يحتوي جزء من المصفوفة عن طريق تحديد البداية والنهاية باستخدام index 
+        let sliceOfArray =numbers.slice(0 , 3);
+        console.log(sliceOfArray);
+
+        // انشاء متغير يحمل مجموعة قيم العنصار في المصفوفة 
+        let totalOfValue = numbers.reduce((total , number) => total + number , 0);
+        console.log(totalOfValue);
+
+    </script>
+</body>
+
+</html>
